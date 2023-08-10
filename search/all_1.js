@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['execute_1',['Execute',['../classMyTool.html#a0a58122023af90b9200d0e71e89cfb36',1,'MyTool::Execute()'],['../classMyToolDynamicMultiThread.html#aec2f9af9495520d74bb154d626a94a63',1,'MyToolDynamicMultiThread::Execute()'],['../classMyToolMultiThread.html#a9cd7c894fc4797b2d81e12e25eb5beec',1,'MyToolMultiThread::Execute()'],['../classMyToolThread.html#a9b582cd202d5578682d57d973988df3c',1,'MyToolThread::Execute()']]]
+  ['finalise_1',['Finalise',['../classMyTool.html#a060ec6356451aa335d0de41093c9992f',1,'MyTool::Finalise()'],['../classMyToolDynamicMultiThread.html#ab70e77b0fd90e50c5103ccfa0bfd6485',1,'MyToolDynamicMultiThread::Finalise()'],['../classMyToolMultiThread.html#a8f25561dc6a5daf8f4db85afecbb2c38',1,'MyToolMultiThread::Finalise()'],['../classMyToolThread.html#aa51e385684efcb19f1c039b96653070e',1,'MyToolThread::Finalise()']]]
 ];
