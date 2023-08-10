@@ -75,44 +75,45 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Tool.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structMyToolMultiThread__args.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a> : Thread_args {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~<a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">bool</span> busy;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::string message;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classMyToolMultiThread.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMyToolMultiThread.html">MyToolMultiThread</a> : <span class="keyword">public</span> Tool {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classMyToolMultiThread.html#ac24f005c6da9c552871f6ff2672cf7f1">MyToolMultiThread</a>();  </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a19dc55079a7b2da02ad9addd565b8e80">Initialise</a>(std::string configfile,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        DataModel&amp; data);  </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a9cd7c894fc4797b2d81e12e25eb5beec">Execute</a>();                    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a8f25561dc6a5daf8f4db85afecbb2c38">Finalise</a>();                   </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> Thread(</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            Thread_args* arg);  </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Utilities* m_util;      </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::vector&lt;MyToolMultiThread_args*&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            args;  </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> m_freethreads;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassMyToolMultiThread_html"><div class="ttname"><a href="classMyToolMultiThread.html">MyToolMultiThread</a></div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.h:37</div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;DataModel.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Tool.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structMyToolMultiThread__args.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a> : Thread_args {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ~<a class="code" href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">bool</span> busy;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::string message;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classMyToolMultiThread.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMyToolMultiThread.html">MyToolMultiThread</a> : <span class="keyword">public</span> Tool {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classMyToolMultiThread.html#ac24f005c6da9c552871f6ff2672cf7f1">MyToolMultiThread</a>();  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a19dc55079a7b2da02ad9addd565b8e80">Initialise</a>(std::string configfile,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        DataModel&amp; data);  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a9cd7c894fc4797b2d81e12e25eb5beec">Execute</a>();                    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMyToolMultiThread.html#a8f25561dc6a5daf8f4db85afecbb2c38">Finalise</a>();                   </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> Thread(</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            Thread_args* arg);  </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        Utilities* m_util;      </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::vector&lt;MyToolMultiThread_args*&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            args;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">int</span> m_freethreads;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassMyToolMultiThread_html"><div class="ttname"><a href="classMyToolMultiThread.html">MyToolMultiThread</a></div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.h:38</div></div>
 <div class="ttc" id="aclassMyToolMultiThread_html_a19dc55079a7b2da02ad9addd565b8e80"><div class="ttname"><a href="classMyToolMultiThread.html#a19dc55079a7b2da02ad9addd565b8e80">MyToolMultiThread::Initialise</a></div><div class="ttdeci">bool Initialise(std::string configfile, DataModel &amp;data)</div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.cpp:9</div></div>
 <div class="ttc" id="aclassMyToolMultiThread_html_a8f25561dc6a5daf8f4db85afecbb2c38"><div class="ttname"><a href="classMyToolMultiThread.html#a8f25561dc6a5daf8f4db85afecbb2c38">MyToolMultiThread::Finalise</a></div><div class="ttdeci">bool Finalise()</div><div class="ttdoc">Finalise funciton used to clean up resorces.</div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.cpp:66</div></div>
 <div class="ttc" id="aclassMyToolMultiThread_html_a9cd7c894fc4797b2d81e12e25eb5beec"><div class="ttname"><a href="classMyToolMultiThread.html#a9cd7c894fc4797b2d81e12e25eb5beec">MyToolMultiThread::Execute</a></div><div class="ttdeci">bool Execute()</div><div class="ttdoc">Executre function used to perform Tool perpose.</div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.cpp:42</div></div>
 <div class="ttc" id="aclassMyToolMultiThread_html_ac24f005c6da9c552871f6ff2672cf7f1"><div class="ttname"><a href="classMyToolMultiThread.html#ac24f005c6da9c552871f6ff2672cf7f1">MyToolMultiThread::MyToolMultiThread</a></div><div class="ttdeci">MyToolMultiThread()</div><div class="ttdoc">Simple constructor.</div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.cpp:7</div></div>
-<div class="ttc" id="astructMyToolMultiThread__args_html"><div class="ttname"><a href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a></div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.h:19</div></div>
+<div class="ttc" id="astructMyToolMultiThread__args_html"><div class="ttname"><a href="structMyToolMultiThread__args.html">MyToolMultiThread_args</a></div><div class="ttdef"><b>Definition:</b> MyToolMultiThread.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
