@@ -1,3 +1,7 @@
 *~
 *.o
 *.so
+.idea
+cmake-build-debug
+build-*
+install-*
