@@ -1,4 +1,4 @@
-FROM ghcr.io/hyperk/hk-DataModel:main
+FROM ghcr.io/hyperk/hk-datamodel:main
 
 COPY . /usr/local/hk/hk-LibToolPackTemplate
 
